@@ -1,0 +1,18 @@
+{
+  "name": "egg-service",
+  "version": "1.0.0",
+  "description": "electron-react 后端服务框架",
+  "main": "index.js",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zxj176381",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.29.1",
+    "egg-bin": "^4.15.0",
+    "egg-cors": "^2.2.3",
+    "egg-mysql": "^3.0.0"
+  }
+}
