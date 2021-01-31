@@ -1,36 +1,9 @@
 {
   "keys": "E:\\admin\\egg-service\\config\\config.default.js",
-  "mysql": {
-    "client": {
-      "host": "E:\\admin\\egg-service\\config\\config.local.js",
-      "port": "E:\\admin\\egg-service\\config\\config.local.js",
-      "user": "E:\\admin\\egg-service\\config\\config.local.js",
-      "password": "E:\\admin\\egg-service\\config\\config.local.js",
-      "database": "E:\\admin\\egg-service\\config\\config.local.js"
-    },
-    "default": {
-      "database": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js",
-      "connectionLimit": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js"
-    },
-    "app": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js",
-    "agent": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js"
-  },
-  "cors": {
-    "origin": "E:\\admin\\egg-service\\config\\config.local.js",
-    "allowMethods": "E:\\admin\\egg-service\\config\\config.local.js"
-  },
-  "session": {
-    "maxAge": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js"
-  },
+  "secret": "E:\\admin\\egg-service\\config\\config.default.js",
   "security": {
-    "domainWhiteList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
     "csrf": {
-      "enable": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
+      "enable": "E:\\admin\\egg-service\\config\\config.default.js",
       "type": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
       "ignoreJSON": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
       "useSession": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
@@ -41,6 +14,9 @@
       "queryName": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
       "refererWhiteList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js"
     },
+    "domainWhiteList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
       "enable": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
       "value": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js"
@@ -78,6 +54,31 @@
       "ipBlackList": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js",
       "checkAddress": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js"
     }
+  },
+  "mysql": {
+    "client": {
+      "host": "E:\\admin\\egg-service\\config\\config.local.js",
+      "port": "E:\\admin\\egg-service\\config\\config.local.js",
+      "user": "E:\\admin\\egg-service\\config\\config.local.js",
+      "password": "E:\\admin\\egg-service\\config\\config.local.js",
+      "database": "E:\\admin\\egg-service\\config\\config.local.js"
+    },
+    "default": {
+      "database": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js",
+      "connectionLimit": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js"
+    },
+    "app": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js",
+    "agent": "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\config.default.js"
+  },
+  "cors": {
+    "origin": "E:\\admin\\egg-service\\config\\config.local.js",
+    "allowMethods": "E:\\admin\\egg-service\\config\\config.local.js"
+  },
+  "session": {
+    "maxAge": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\admin\\egg-service\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
     "shtml": "E:\\admin\\egg-service\\node_modules\\egg-security\\config\\config.default.js"
@@ -164,6 +165,10 @@
     "defaultViewEngine": "E:\\admin\\egg-service\\node_modules\\egg-view\\config\\config.default.js",
     "mapping": "E:\\admin\\egg-service\\node_modules\\egg-view\\config\\config.default.js"
   },
+  "jwt": {
+    "secret": "E:\\admin\\egg-service\\node_modules\\egg-jwt\\config\\config.default.js",
+    "enable": "E:\\admin\\egg-service\\node_modules\\egg-jwt\\config\\config.default.js"
+  },
   "env": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
   "name": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
   "cookies": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
@@ -188,6 +193,7 @@
       "egg": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
       "egg-bin": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
       "egg-cors": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
+      "egg-jwt": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js",
       "egg-mysql": "E:\\admin\\egg-service\\node_modules\\egg\\config\\config.default.js"
     }
   },

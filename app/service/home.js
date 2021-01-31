@@ -15,15 +15,15 @@ class HomeService extends Service {
   }
 
   async newMenu() {
-    const { mysql, successMsg } = this.app;
+    const { mysql, successMsg, getCurrentTimestamp } = this.app;
     const menu = {
       name: '测试排序',
       is_show: 1,
       sort: 10,
-      create_time: Date.parse(new Date()) / 1000,
-      update_time: Date.parse(new Date()) / 1000,
+      create_time: getCurrentTimestamp(),
+      update_time: getCurrentTimestamp(),
     };
-    let newMenu = await mysql.insert('er_menu', menu);
+    await mysql.insert('er_menu', menu);
     const result = successMsg('', '添加菜单导航成功！');
     return result;
   }

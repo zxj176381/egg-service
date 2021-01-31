@@ -17,7 +17,7 @@
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
-        "enable": true,
+        "enable": false,
         "type": "ctoken",
         "ignoreJSON": false,
         "useSession": false,
@@ -26,8 +26,7 @@
         "headerName": "x-csrf-token",
         "bodyName": "_csrf",
         "queryName": "_csrf",
-        "refererWhiteList": [],
-        "matching": "<Function anonymous>"
+        "refererWhiteList": []
       },
       "xframe": {
         "enable": true,
@@ -107,6 +106,7 @@
         "E:\\admin\\egg-service\\node_modules\\egg-view\\config\\locales",
         "E:\\admin\\egg-service\\node_modules\\egg-mysql\\config\\locales",
         "E:\\admin\\egg-service\\node_modules\\egg-cors\\config\\locales",
+        "E:\\admin\\egg-service\\node_modules\\egg-jwt\\config\\locales",
         "E:\\admin\\egg-service\\node_modules\\egg\\config\\locales",
         "E:\\admin\\egg-service\\config\\locales"
       ],
@@ -192,12 +192,16 @@
         "port": "3306",
         "user": "root",
         "password": "<String len: 4>",
-        "database": "test"
+        "database": "electron-react"
       }
     },
     "cors": {
       "origin": "*",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
+    "jwt": {
+      "secret": "<String len: 6>",
+      "enable": false
     },
     "env": "local",
     "name": "egg-service",
@@ -224,6 +228,7 @@
         "egg": "^2.29.1",
         "egg-bin": "^4.15.0",
         "egg-cors": "^2.2.3",
+        "egg-jwt": "^3.1.7",
         "egg-mysql": "^3.0.0"
       }
     },
@@ -330,8 +335,11 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
+    "secret": "<String len: 3>",
     "coreMiddlewares": "~config~coreMiddleware",
-    "appMiddlewares": [],
+    "appMiddlewares": [
+      "jwt"
+    ],
     "appMiddleware": "~config~appMiddlewares",
     "multipartParseOptions": {
       "autoFields": false,
@@ -514,6 +522,19 @@
       "from": "E:\\admin\\egg-service\\config\\plugin.js",
       "path": "E:\\admin\\egg-service\\node_modules\\egg-cors",
       "version": "2.2.3"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "E:\\admin\\egg-service\\config\\plugin.js",
+      "path": "E:\\admin\\egg-service\\node_modules\\egg-jwt",
+      "version": "3.1.7"
     }
   }
 }
